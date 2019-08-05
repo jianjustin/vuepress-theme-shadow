@@ -1,6 +1,6 @@
-# material-shadow
+# material-shadow2
 
-> a static site generator with Vue.js , Vuetify
+> A Vue.js project
 
 ## Build Setup
 
