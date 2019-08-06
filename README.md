@@ -1,4 +1,4 @@
-# material-shadow2
+# material-shadow
 
 > A Vue.js project
 
