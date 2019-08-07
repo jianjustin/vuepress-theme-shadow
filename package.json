@@ -1,14 +1,14 @@
 {
-  "name": "vuepress-demo",
+  "name": "vuepress-theme-shadow",
   "version": "1.0.0",
-  "description": "",
+  "description": " a vuepress theme design by vuetify ",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "jian",
+  "license": "MIT",
   "dependencies": {
     "material-design-icons-iconfont": "^5.0.1",
     "vuetify": "^2.0.4"

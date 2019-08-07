@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C语言学习笔记1
+title: C语言学习笔记
 date: 2018-10-10
 categories: C语言
 ---

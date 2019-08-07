@@ -1,14 +1,15 @@
 <template>
   <v-container fluid grid-list-md pa-2>
     <v-layout wrap>
-      <v-flex v-for="card in cards" :key="card.title" xs4>
-        <v-card>
-          <v-img v-bind:src="randomImg()" class="white--text" height="200px" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
-            <v-card-title class="fill-height align-end" ></v-card-title>
+      <v-flex v-for="page in $site.pages" :key="page.title" v-if="page.path.indexOf('posts') > -1" xs4>
+        <v-card v-on:click="toPath(page.path)">
+          <v-img v-bind:src="randomImg()" class="white--text" height="200px">
+            <v-card-title class="fill-height align-end"></v-card-title>
           </v-img>
-          <v-card-text v-text="card.title"></v-card-text>
+          <v-card-text>{{page.title}}</v-card-text>
         </v-card>
       </v-flex>
+      <v-spacer></v-spacer>
     </v-layout>
   </v-container>
 </template>
@@ -16,17 +17,15 @@
 export default {
   name: "Home",
   data() {
-    return {
-      cards: [
-        { title: 'Pre-fab homes'},
-        { title: 'Favorite road trips'},
-        { title: 'Best airlines'},
-      ],
-    }
+    return {}
   },
   components: {},
   methods: {
-    randomNum: function (minNum, maxNum) {
+    toPath: function(path){
+      debugger;
+        this.$router.push(path);
+    },
+    randomNum: function(minNum, maxNum) {
       switch (arguments.length) {
         case 1:
           return parseInt(Math.random() * minNum + 1, 10);
@@ -39,8 +38,8 @@ export default {
           break;
       }
     },
-    randomImg(){
-      var number = this.randomNum(0,100);
+    randomImg() {
+      var number = this.randomNum(0, 100);
       var url = "https://picsum.photos/id/" + number + "/1920/1080";
       return url;
 

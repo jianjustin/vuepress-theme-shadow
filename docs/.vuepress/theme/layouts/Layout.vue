@@ -2,9 +2,9 @@
   <v-app id="inspire">
     <v-card class="pa-8" min-height="100vh" color="#CCD1D1">
       <Appbar></Appbar>
-      <Home v-if="ishome"></Home>
-      <v-card class="ma-2" v-else="!ishome">
-        <v-container  >
+      <Home v-if="$page.frontmatter.home"></Home>
+      <v-card class="ma-2" v-else="!$page.frontmatter.home">
+        <v-container>
          <v-card-text>
                   <Content />
                 </v-card-text>
@@ -20,7 +20,7 @@ export default {
 
   data() {
     return {
-      ishome: true
+
     }
   },
   components: {
