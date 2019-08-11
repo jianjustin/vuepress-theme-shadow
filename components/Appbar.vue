@@ -1,6 +1,6 @@
 <template>
   <v-card class="ma-2 mb-6">
-    <v-app-bar class="white--text" src="https://picsum.photos/1920/1080?random">
+    <v-app-bar class="white--text" color="#CCD1D1">
       <v-toolbar-title offset-md5>
         <v-btn class="ml-2 white--text" text rounded v-on:click="toPath($localePath)">
           {{ $siteTitle }}
@@ -23,9 +23,7 @@ export default {
     toPath: function(path){
       debugger;
         this.$router.push(path);
-    }
+    }, 
   }
-
 }
-
 </script>

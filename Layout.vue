@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-card class="pa-8" min-height="100vh" color="#CCD1D1">
+    <v-card class="pa-8" min-height="100vh">
       <Appbar></Appbar>
       <Home v-if="$page.frontmatter.home"></Home>
       <v-card class="ma-2" v-else="!$page.frontmatter.home">
